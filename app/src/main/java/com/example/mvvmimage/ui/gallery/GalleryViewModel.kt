@@ -1,6 +1,5 @@
 package com.example.mvvmimage.ui.gallery
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
@@ -11,8 +10,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 
-
-class GalleryViewModel @ViewModelInject constructor(
+@HiltViewModel
+class GalleryViewModel @Inject constructor(
     private val repository: UnsplashRepository
 ) : ViewModel() {
 
