@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-parcelize'
-
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -14,6 +15,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
+        multiDexEnabled true
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -53,10 +55,11 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:2.3.5"
 
     // Dagger Hilt
-    implementation "com.google.dagger:hilt-android:2.36"
-    annotationProcessor "com.google.dagger:hilt-android-compiler:2.28.3-alpha"
+    implementation "com.google.dagger:hilt-android:2.38.1"
+    kapt "com.google.dagger:hilt-android-compiler:2.38.1"
     implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
-    annotationProcessor "androidx.hilt:hilt-compiler:1.0.0"
+    kapt  'androidx.hilt:hilt-compiler:1.0.0'
+
 
     // Retrofit + GSON
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
@@ -68,8 +71,8 @@ dependencies {
     // Paging 3
     implementation "androidx.paging:paging-runtime-ktx:3.1.0-alpha03"
 
-    // Room
-    implementation "androidx.room:room-runtime:2.3.0"
-    annotationProcessor "androidx.room:room-compiler:2.3.0"
+    implementation 'com.android.support:multidex:1.0.3'
+
+
 }
 

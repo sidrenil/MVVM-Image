@@ -7,21 +7,26 @@ import androidx.lifecycle.switchMap
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
 import com.example.mvvmimage.data.UnsplashRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
+
+
 
 class GalleryViewModel @ViewModelInject constructor(
-    private val repository: UnsplashRepository,
+    private val repository: UnsplashRepository
 ) : ViewModel() {
 
     private val currentQuery = MutableLiveData(DEFAULT_QUERY)
-    val photos = currentQuery.switchMap {queryString ->
-        repository.getSearchResults(queryString).cachedIn(viewModelScope)
 
+    val photos = currentQuery.switchMap { queryString ->
+        repository.getSearchResults(queryString).cachedIn(viewModelScope)
     }
 
-    fun searchPhotos(query:String){
+    fun searchPhotos(query: String) {
         currentQuery.value = query
     }
-    companion object{
+
+    companion object {
         private const val DEFAULT_QUERY = "cats"
     }
 }
