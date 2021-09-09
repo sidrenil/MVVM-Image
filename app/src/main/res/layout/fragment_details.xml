@@ -13,7 +13,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="4dp">
+            android:paddingBottom="20dp">
 
             <ImageView
                 android:id="@+id/image_view"
@@ -21,7 +21,7 @@
                 android:layout_height="700dp"
                 android:layout_marginBottom="4dp"
                 android:adjustViewBounds="true"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
                 android:src="@mipmap/ic_launcher_round"
                 tools:layout_height="300dp" />
 
@@ -42,11 +42,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginEnd="8dp"
+                android:paddingBottom="10dp"
                 android:text="fotoğraf şurdan"
                 android:textColor="@color/white"
                 android:visibility="gone"
                 tools:visibility="invisible" />
-
 
         </LinearLayout>
     </ScrollView>
