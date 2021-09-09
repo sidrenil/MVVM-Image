@@ -21,7 +21,7 @@
         android:id="@+id/button_retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#E87E7E"
+        android:backgroundTint="#6699CF"
         android:text="yenile" />
 
 </LinearLayout>
