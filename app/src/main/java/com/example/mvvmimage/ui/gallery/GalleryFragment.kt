@@ -67,8 +67,6 @@ class GalleryFragment : Fragment(R.layout.fragment_gallery),
         findNavController().navigate(action)
     }
 
-
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater.inflate(R.menu.menu_gallery, menu)

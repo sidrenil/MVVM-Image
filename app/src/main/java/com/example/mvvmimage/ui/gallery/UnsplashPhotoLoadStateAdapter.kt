@@ -11,7 +11,6 @@ import com.example.mvvmimage.databinding.UnsplashPhotoLoadStateFooterBinding
 class UnsplashPhotoLoadStateAdapter(private val retry: () -> Unit) :
     LoadStateAdapter<UnsplashPhotoLoadStateAdapter.LoadStateViewHolder>() {
 
-
     override fun onCreateViewHolder(parent: ViewGroup, loadState: LoadState): LoadStateViewHolder {
         val binding = UnsplashPhotoLoadStateFooterBinding.inflate(
             LayoutInflater.from(parent.context),

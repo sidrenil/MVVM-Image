@@ -12,7 +12,7 @@ import javax.inject.Inject
 class GalleryViewModel @Inject constructor(
     private val repository: UnsplashRepository,
 
-   state: SavedStateHandle
+    state: SavedStateHandle
 ) : ViewModel() {
 
     private val currentQuery = state.getLiveData(CURRENT_QUERY, DEFAULT_QUERY)
